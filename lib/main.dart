@@ -6,9 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  
+  const MyApp({super.key}); 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +20,28 @@ class MyApp extends StatelessWidget {
             fontSize: 16
           ),
           prefixIconColor: Color.fromRGBO(119, 119, 119, 1)
-        )
+        ),
+        appBarTheme: AppBarTheme(
+          titleTextStyle: TextStyle(
+            fontSize: 20,
+            color: Colors.black
+          )
+        ),
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 35
+          ),
+          titleMedium: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold
+          ),
+          bodySmall: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16
+          )
+        ),
+        useMaterial3: true
       ),
       home:  HomePage(),
     );
